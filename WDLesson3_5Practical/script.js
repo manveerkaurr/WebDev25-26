@@ -4,13 +4,15 @@
       3) Display the results in the appropriate element
 */
 function recArea(){
-
+      let len=parseFloat(document.getElementById("l").value);
+      let wid=parseFloat(document.getElementById("W").value);
+      let op=parseFloat(document.getElementById("output").value);
+      let A=len*wid;
+      op.innerHTML="Area is:"+A;
 }
-
 function recPerimeter(){
-
+      
 }
-
 
 /* Challenge 4: Complete the area and circumference functions below for the circle.  Guidelines,
       1) Create variables and retrieve the information from the text inputs you created in Challenge 3.
