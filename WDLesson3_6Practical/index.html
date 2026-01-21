@@ -23,6 +23,12 @@
     </div>
     <div class="solutions">
       <!-- Challenge 1: UI for Average program. Note: User will enter three grades as three separate inputs. -->
+       let g1=parseFloat(document.getElementById("g1").value);
+       let g2=parseFloat(document.getElementById("g2").value);
+       let g3=parseFloat(document.getElementById("g3").value);
+       let op=document.getElementById("output");
+       let avg=(g1+g2+g3+)/3;
+       op.innerHTML=`the average of all three grades is ${avg}`;
       <!-- Challenge 2 is in script.js -->
 
     </div>
@@ -36,6 +42,13 @@
     </div>
     <div class="solutions">
       <!-- Challenge 3: UI for Slope program.  Note: User will enter values for x1, y1, x2 and y2 as four separate inputs. -->
+       let x1=parseFloat(document.getElementById("x1").value);
+       let y1=parseFloat(document.getElementById("y1").value);
+       let x2=parseFloat(document.getElementById("x2").value);
+       let y2=parseFloat(document.getElementById("y2").value);
+       let op=document.getElementById("output");
+       let avg 
+       op.innerHTML=`the slope for all four is ${slope}`;
       <!-- Challenge 4 is in script.js -->
     </div>
     <div class="container subbanner">
@@ -47,6 +60,11 @@
     </div>
     <div class="solutions last">
       <!-- Challenge 5: UI for BMI program. Note: User will enter their height and weight as two separate inputs. -->
+       let h=parseFloat(document.getElementById("h").value);
+       let w=parseFloat(document.getElementById("w").value);
+       let op=document.getElementById("output");
+       let avg=
+       op.innerHTML=`the average BMI for height and weight is ${BMI}`;
       <!-- Challenge 6 is in script.js -->
     </div>
     <div id="footer" class="container center">
