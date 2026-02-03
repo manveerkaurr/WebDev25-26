@@ -7,7 +7,7 @@ function cylinder(){
 
   /* Challenge 5: Are there any errors in retrieving and parsing the information from the text inputs? */
   let r = parseFloat(document.getElementbyId("r").value);
-  let height = parseFloat(document.getElementById("height").value);
+  let height = parseFloat(document.getElementById("height ").value);
 
   /* Challenge 6: Does the variable output correctly create a reference to the output container? */
   let output = document.getElementById("output");
