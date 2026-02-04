@@ -11,11 +11,16 @@
         let house = ""
 
         // Challenge 9: If the language is equal to "Spanish", set house to "casa"
-
+         if (lang === "Spanish") {
+          house = "casa";
+         }
         // Challenge 10: Make a similar decision for the other two languages in the drop down.
-
+        else if (lang === "French") {
+          house = "maison";
+        }
         // Challenge 11: Display an appropriate message stating "house" in the specified language is given translation.       
-        
+         let resultMessage = "The word 'house' in " + lang + " is '" + house + "'.";
+         document.getElementById("resultArea").textContent = resultMessage;
 
       }
     </script>
@@ -43,6 +48,12 @@
           <option disabled>Select language</option>
           <option>Spanish</option>
           <!-- Challenge 8: Add two more language as shown above -->
+           <select id="language">
+            <option disabled>Select language</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+          </select>
            
         </select>
         <input type="button" onclick="translateHouse()" value="Translate">
