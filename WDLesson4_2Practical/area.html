@@ -25,7 +25,18 @@
     <div class="container">
       <div class="card">
         <!-- Challenge 1: Create the UI for the Scenario -->  
+         function area() {
+  length = parseFloat(document.getElementById('length').value);
+  width = parseFloat(document.getElementById('width').value);
+  result = document.getElementById('result');
+  if (length <= 0 || width <= 0) {
+    result.display= "Inappropriate measurement";
+  } else {
+    area = length * width;
+    result= "The area is: " + area;
+  }
         <!-- Go to script.js for Challenge 2 -->     
+      
       </div>
     </div>
 
