@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Kesson 4.3 Practical</title>
+    <title>Lesson 4.3 Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
       #massTable{
@@ -52,6 +52,14 @@
         <a href="hhttps://www.cdc.gov/growth-chart-training/hcp/using-bmi/calculating-bmi.html"> CDC Reference </a>
         <hr>
         <!-- Challenge 1: Create the UI.  You will need to look up the formula for BMI in order to determine the number of text inputs required. -->
+        <input type="number" id="height">
+         <br>
+         <input type="number" id="weight">
+         <br>
+         <button onclick="calculateBMI()">Calculate BMI</button>
+         <div id="Result"></div>
+         <img id="statusImage" src= alt="BMI status " style="display:none; max-width:200px;">
+        
       </div>
      
     </div>
