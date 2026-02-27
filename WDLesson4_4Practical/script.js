@@ -6,10 +6,11 @@
 */
 let correct;
 function generateProblem(){
-let num1= Math.floor(Math.random()*(20-0+1)+0);
-let num2= Math.floor(Math.random()*(20-0+1)+0);
-correct= num1+num2;
-${num1}+${num2}= correct
+       let prob=document.getElementById("problem");
+       let n1= Math.floor(Math.random()*(20-0+1)+0);
+       let n2= Math.floor(Math.random()*(20-0+1)+0);
+       correct= n1+n2;
+       prob.innerHTML=`${n1}+${n2}=`;
 }
 
 /* Challenge 3: Complete the function checkResponse by ,
@@ -22,13 +23,21 @@ ${num1}+${num2}= correct
        4) Display msg in the output
 */
 function checkResponse(){
-let response;
-let msg=output 
-if(response==num1+num2){
-       filename="correct.webp";
-else
-       filename="incorrect.avif";
-}
+       let user= parseInt(document.getElementById("response").value);
+       let op= document.getElementById("output");
+       let filename="";
+       let msg="";
+
+       if (user==correct){
+              filename="correct.webp";
+              msg=`correct <br> <img src="${filename}">`;
+       }else{
+              filename="incorrect.avif";
+              msg=`incorrect The correct awnser is ${correct}. <br> <img src="$
+              {filename}">`;
+       }
+       op.innerHTML=msg;
+
 }
 
 
