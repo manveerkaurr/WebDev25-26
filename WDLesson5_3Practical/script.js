@@ -11,6 +11,11 @@
 */
 
 function balance(){
+        let principal = parseFloat(document.getElementById("p").value);
+        let rate = parseFloat(document.getElementById("r").value) / 100;
+        let time = parseFloat(document.getElementById("t").value);
+        let balance = principal; 
+        let table = "<table border='1'><thead><tr><th>Year</th><th>Balance</th></tr></thead><tbody>";
 
 
 }
@@ -21,6 +26,5 @@ function balance(){
         3) Adjust the heading reflect the compound length.  Below are some typical lengths
               a. n = 1 then the interest is compounded yearly
               b. n = 12 then the interest is compounded monthly
-              c. n = 3 then the interest is compounded quarterly
-              d. n = 2 then the interest is compounded bi-yearly
+              c. n = 4 then the interest is compounded quarterly
 */ 
