@@ -11,11 +11,21 @@
 */
 
 function balance(){
-        let principal = parseFloat(document.getElementById("p").value);
-        let rate = parseFloat(document.getElementById("r").value) / 100;
-        let time = parseFloat(document.getElementById("t").value);
-        let balance = principal; 
-        let table = "<table border='1'><thead><tr><th>Year</th><th>Balance</th></tr></thead><tbody>";
+        let output= document.getElementById("output");
+        let r = parseFloat(document.getElementById("r").value) / 100;
+        let years = parseFloat(document.getElementById("t").value);
+        let build="";
+        build += <table>
+                <tr> <th> years </th> <th> balance</th> </tr>
+        for(let t=0); t=years; t++{
+                let A = P + Math.pow(1+(r/100), t);
+                build+= <tr>
+                                <td>${t}</td>
+                                <td>$$(A.toFixed(2)</td>
+                        </tr>
+        }        
+        build +== </table>
+        output.innerHTML=build;
 
 
 }
