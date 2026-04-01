@@ -3,38 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>WD_6.1 Practical</title>
+    <title>WD Lesson 6.2 Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
    </head>
-  <body onload="init()">
+  <body id="body">
     <div id="banner" class="container center">
-      <h1> Food Mart </h1>
+      <h1> JavaScript Object Notation (JSON) </h1>
     </div>
     <div class="container subbanner">
       <div>
-        <p>This practical challenges students to combine information from arrays to build HTML output. For loops are used to traverse the arrays.<br>Students will create and display cards of various foods in their market.</p>
+        <p>This practical challenges students to access information from a JSON variable and generate HTML.  Information can range from  integers and strings to more complex data such as arrays or even other JSON.</p>
        </div>
     </div>
-    <hr></hr>
 
-    <div class="container food_titles center">
-      <h1>Meats</h1>
-    </div>
-    <div class="container" id="meats"></div>
+    <div class="container">
+      <div id="panel">
 
-    <div class="container food_titles center">
-      <h1>Seafood</h1>
-    </div>
-    <div class="container" id="seafoods"></div>
+        <div class="card">
+          <h3>Bayside High School</h3>
+          <p><span class="highlight">Scenario:</span> Create a card using all the information from the JSON variable <i>school</i> about Bayside High School.</p>
+          <a onclick="BHS()" class="button"> Show Card </a>
+        </div>
 
-    <div class="container food_titles center">
-      <h1>Dessert</h1>
+        <div class="card">
+          <h3>Favorite Artist</h3>
+          <p><span class="highlight">Scenario:</span> 
+            Create a JSON of your favorite music artist. Include the artist name, the image of an album, 
+            the title of the album, and a link to a website about the artist. Create a card using all the 
+            information in the JSON.</p>
+          <a onclick="artist()" class="button"> Show Card </a>
+        </div>
+
+      </div>
+      <div class="card">
+        <h1>Output</h1>
+        <div id="output"></div>
+      </div>
     </div>
-    <div class="container" id="desserts"></div>
-    
+
+
     <div id="footer" class="container center">
-      <h3>Lesson 6.1 Practical</h3>
+      <h3>Lesson 6.2 Practical</h3>
     </div>  
   </body>
 </html>

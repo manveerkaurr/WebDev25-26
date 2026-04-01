@@ -1,58 +1,33 @@
-/*
-Challenge 1: Add the appropriate images to each array below from the list of images provided.
- "beeftips.jpg", "brisket.jpg", "ribeye.jpg", "steak.jpg", "clams.jpg", "crabs.jpg", "lobster.png", "scallops.jpg", "shrimp.jpg","tuna.jpg", "flan.jpg", "passionberry.jpeg", "oreocup.jpg"
-*/ 
-//Challenge 2: Add appropriate prices for each food in their corresponding array. (Any reasonable price works) 
-//Challenge 3: Add appropriate titles for each food in their corresponding array. Use the image names as a hint for the food title.
+function BHS(){
+  let school = {
+    "name":"Bayside High School",
+    "image":"https://imagescdn.homes.com/i2/DR3rh3ZAFGmxdce_vrcZB-VfI1qR7cPIq11ixKmzhCY/117/bayside-high-school-bayside-ny-2-schoolphoto.jpg",
+    "address": "32-24 Corporal Kennedy Street, Bayside NY 11361"
+  };
+  let output = document.getElementById("output");
 
-let meat_images = ["beeftips.jpg", "brisket.jpg", "ribeye.jpg", "steak.jpg"];
-let meat_prices = [8.99, 9.99, 10.99, 11.99,];
-let meat_titles = ["beef tips", "brisket", "ribeye", "steak"];
+  //Challenge 1: Create and display a card of the information contained in the JSON variable school
+  let build=""; 
+  build += <div 
 
-let seafood_images = ["clams.jpg", "crabs.jpg", "lobster.jpg", "scallops.jpg", "shrimp.jpg", "tuna.jpg"];
-let seafood_prices = [1.99, 2.99, 3.99, 4.99, 5.99, 6.99];
-let seafood_titles = ["clams", "crabs", "lobster", "scallops", "shrimp", "tuna"];
-
-let dessert_images = ["flan.jpg", "passionberry.jpeg", "oreocup.jpg"];
-let dessert_prices = [7.99, 12.99, 13.99];
-let dessert_titles = ["flan", "passionberry", "oreocup.jpg"];
-
-function init(){
-  //Each food has its own output container
-  let m = document.getElementById("meats");
-  let s = document.getElementById("seafoods");
-  let d = document.getElementById("desserts");
-  let build = ``;
-
-  /* Notes for Challenges 4 through 6 below:
-      1) Each challenge requires its own for loop to build the output.
-      2) You can reuse the build variable as long as you set it back to `` before each loop.
-      3) Create a basic card with a title, image and price.
-  */
-
-  //Challenge 4:  Build cards for the meats. Place the build in the meat container. 
-  for(let index = 0; <meat_images.length;index++){
-    build += `<div class="card"
-                <h3>$(meat_titles[index]}</h3>)
-                <img class="food" src="images/${meat_images[index]}">
-                <h4>$${meat_prices[index]}</h4>
-               </div>`;
-  }
-  m.innerHTML= build;              
-
-  }
-
-  //Challenge 5:  Build cards for the seafoods. Place the build in the seafood container.
-for(let index = 0; <seafood_images_images.length;index++){
-    build += `<div class="card"
-                <h3>$(seafood_titles[index]}</h3>)
-                <img class="food" src="images/${meat_images[index]}">
-                <h4>$${meat_prices[index]}</h4>
-               </div>`;
-  }
-  m.innerHTML= build;              
-
-  }
-  //Challenge 6:  Build cards for the desserts. Place the build in the dessert container.
 
 }
+function artist(){
+  //Challenge 2: Fill the JSON below with the specified information for your favorite artist
+  let artist = {
+    "name":"Audrey Hobert",
+    "image":"https://www.google.com/imgres?q=audrey%20hobert&imgurl=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6761610000e5eb4fc78e354b19324810f1e933&imgrefurl=https%3A%2F%2Fopen.spotify.com%2Fartist%2F4N0TAwz9vhnQtjCqS65aKS&docid=6fKPsBa9egIL_M&tbnid=bk5vndYxXJOKcM&vet=12ahUKEwj2o7Xqmc2TAxXwhIkEHbDaBuQQnPAOegQIGxAB..i&w=640&h=640&hcb=2&ved=2ahUKEwj2o7Xqmc2TAxXwhIkEHbDaBuQQnPAOegQIGxAB&safe=active&ssui=on",
+    "album":"Whos the clown?",
+    "url":"https://www.audreyhobert.net/"
+  };
+  let output = document.getElementById("output");
+
+  //Challenge 3: Build a card for the information in the JSON. Make the image a hyperlink to the url provided.
+  let build="";
+
+}
+
+
+
+
+
