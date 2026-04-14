@@ -1,33 +1,52 @@
-function BHS(){
-  let school = {
-    "name":"Bayside High School",
-    "image":"https://imagescdn.homes.com/i2/DR3rh3ZAFGmxdce_vrcZB-VfI1qR7cPIq11ixKmzhCY/117/bayside-high-school-bayside-ny-2-schoolphoto.jpg",
-    "address": "32-24 Corporal Kennedy Street, Bayside NY 11361"
-  };
-  let output = document.getElementById("output");
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 6.3 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+   </head>
+  <body>
+    <div id="banner" class="container center">
+      <h1> Store </h1>
+      <!-- Challenge 1: Give your store a new name (replace content of h1 above)-->
+    </div>
 
-  //Challenge 1: Create and display a card of the information contained in the JSON variable school
-  let build=""; 
-  build += <div 
+    <div class="container subbanner">
+      <div>
+        <p><!-- Challenge 2: Welcome the customer to your store. Tell them why your store is the BEST! Think of it as a commercial -->
+        <p>Welcome</p>
 
+        </p> 
+       </div>
+    </div>
 
-}
-function artist(){
-  //Challenge 2: Fill the JSON below with the specified information for your favorite artist
-  let artist = {
-    "name":"Audrey Hobert",
-    "image":"https://www.google.com/imgres?q=audrey%20hobert&imgurl=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab6761610000e5eb4fc78e354b19324810f1e933&imgrefurl=https%3A%2F%2Fopen.spotify.com%2Fartist%2F4N0TAwz9vhnQtjCqS65aKS&docid=6fKPsBa9egIL_M&tbnid=bk5vndYxXJOKcM&vet=12ahUKEwj2o7Xqmc2TAxXwhIkEHbDaBuQQnPAOegQIGxAB..i&w=640&h=640&hcb=2&ved=2ahUKEwj2o7Xqmc2TAxXwhIkEHbDaBuQQnPAOegQIGxAB&safe=active&ssui=on",
-    "album":"Whos the clown?",
-    "url":"https://www.audreyhobert.net/"
-  };
-  let output = document.getElementById("output");
+    <!-- Links to display eventHandlers that display Meats, Seafood and Desserts.  
+     Look at script.js for the names of the event handlers. 
+     Meats is provided below as an example. -->
+    <nav class="container">
+      <a onclick="showMeats()"> Meats </a>
+      <!-- Challenge 3: Add 2 more links - one for Seafood and the other for Desserts -->
+      <nav class="container">
+        <a onclick="forShowSeafood()"> Seafood</a>
+      </nav>
+    </nav>
+    <nav class="container">
+      <a onclick="showDesserts()"> Desserts</a>
+    </nav>
+    
 
-  //Challenge 3: Build a card for the information in the JSON. Make the image a hyperlink to the url provided.
-  let build="";
+    <div class="container food_titles center">
+      <!-- title -->
+      <h1 id="title">Item Title</h1>
+    </div>
 
-}
+    <!-- output -->
+    <div class="container" id="output"></div>
 
-
-
-
-
+    <div id="footer" class="container center">
+      <h3>Lesson 6.3 Practical</h3>
+    </div>  
+  </body>
+</html>
