@@ -44,6 +44,11 @@ function showMeats(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.
      2) Change the title to "Meats". 
   */
+  for (let i= 0; i < meats.length; i++){
+    build += `<div class="card">
+                  <h3>${meats[i].title}</h3>
+                  <img src="images/${meats}"
+  }
 
 
   output.innerHTML = build;
@@ -60,6 +65,10 @@ function forShowSeafood(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.   
      2) Change the title to "Seafood".
   */
+    for (let i= 0; i < seafood.length; i++){
+    build += `<div class="card">
+                  <h3>${seafood[i].title}</h3>
+                  <img src="images/${seafood}"
 
 
   output.innerHTML = build;
@@ -76,6 +85,10 @@ function showDesserts(){
      Make the title a heading(h3), place the image in the middle, and make the price a paragraph.
      2) Change the title to "Desserts".
   */
+    for (let i= 0; i < dessert.length; i++){
+    build += `<div class="card">
+                  <h3>${dessert[i].title}</h3>
+                  <img src="images/${dessert}"
 
 
   output.innerHTML = build;
