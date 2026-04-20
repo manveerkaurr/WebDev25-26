@@ -1,52 +1,40 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>WD Lesson 6.3 Practical</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="script.js"></script>
-   </head>
-  <body>
-    <div id="banner" class="container center">
-      <h1> Store </h1>
-      <!-- Challenge 1: Give your store a new name (replace content of h1 above)-->
-    </div>
+let data, info; //global variables
 
-    <div class="container subbanner">
-      <div>
-        <p><!-- Challenge 2: Welcome the customer to your store. Tell them why your store is the BEST! Think of it as a commercial -->
-        <p>Welcome</p>
+async function init(){
+  // Challenge 1: Retrieve the FBI data from https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json
+  let link = "https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json";
+  info = await fetch(https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json);
+  data = await info.json();
+  
+  let output = document.getElementById("output");
+  let build = "";
+  /* Challenge 2: 
+          1) Traverse the data using a 'for' loop.  
+          2) Create a variable to extract each criminal's information from the dataset.
+          3) Using the variable created, generate HTML to display the information for each criminal.
 
-        </p> 
-       </div>
-    </div>
+     Note: To view the PDF of the criminal poster include the following code before the string interpolated url
+     into a hyperlink in order to actually display the PDF in a new tab.
+     https://mozilla.github.io/pdf.js/web/viewer.html?file=${...}
 
-    <!-- Links to display eventHandlers that display Meats, Seafood and Desserts.  
-     Look at script.js for the names of the event handlers. 
-     Meats is provided below as an example. -->
-    <nav class="container">
-      <a onclick="showMeats()"> Meats </a>
-      <!-- Challenge 3: Add 2 more links - one for Seafood and the other for Desserts -->
-      <nav class="container">
-        <a onclick="forShowSeafood()"> Seafood</a>
-      </nav>
-    </nav>
-    <nav class="container">
-      <a onclick="showDesserts()"> Desserts</a>
-    </nav>
-    
+  */
+ for (let i = 0; i < data.length; i++) {
+  let criminal = data.length[i];
+  build += `
+            <div class="card">
+              <img src="${criminal.images[0].thumb}" alt="${criminal.title}">
+              <h2>${criminal.title}</h2>
+              <p><strong>Subject:</strong> ${criminal.subjects[0] || "N/A"}</p>
+                <p>${criminal.description || "description."}</p>
+                 <a class="button" target="_blank" 
+                   href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.files[0].url}">
+                   Veiw
+                </a>
+            </div>
+            `;
+    }
 
-    <div class="container food_titles center">
-      <!-- title -->
-      <h1 id="title">Item Title</h1>
-    </div>
 
-    <!-- output -->
-    <div class="container" id="output"></div>
+  output.innerHTML = build;
+}
 
-    <div id="footer" class="container center">
-      <h3>Lesson 6.3 Practical</h3>
-    </div>  
-  </body>
-</html>
