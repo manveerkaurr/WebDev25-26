@@ -1,40 +1,88 @@
-let data, info; //global variables
+let data, info;
 
-async function init(){
-  // Challenge 1: Retrieve the FBI data from https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json
-  let link = "https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json";
-  info = await fetch(https://raw.githubusercontent.com/rcastro2/WebDevelopment/refs/heads/main/data/fbi.json);
+async function init(){   
+  let link = "311.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
+  info = await fetch(link);
   data = await info.json();
   
   let output = document.getElementById("output");
   let build = "";
-  /* Challenge 2: 
-          1) Traverse the data using a 'for' loop.  
-          2) Create a variable to extract each criminal's information from the dataset.
-          3) Using the variable created, generate HTML to display the information for each criminal.
 
-     Note: To view the PDF of the criminal poster include the following code before the string interpolated url
-     into a hyperlink in order to actually display the PDF in a new tab.
-     https://mozilla.github.io/pdf.js/web/viewer.html?file=${...}
+  for(let i = 0; i < data.length; i+=1){
+    let complaint = data[i];
+    build += `<div class="fitted card">
+                 <h3>${complaint.complaint_type}</h3>
+                 <hr>
+                 <p>${complaint.borough}</p>
+                 <p>${complaint.incident_zip}</p>
+                 <p>${complaint.descriptor}</p>
+                 <hr>
+                 <p>${complaint.created_date}</p>
+                 <hr>
+                 <p>${complaint.agency}</p>
+              </div>`    
+  }
+  output.innerHTML = build;
+}
 
-  */
- for (let i = 0; i < data.length; i++) {
-  let criminal = data.length[i];
-  build += `
-            <div class="card">
-              <img src="${criminal.images[0].thumb}" alt="${criminal.title}">
-              <h2>${criminal.title}</h2>
-              <p><strong>Subject:</strong> ${criminal.subjects[0] || "N/A"}</p>
-                <p>${criminal.description || "description."}</p>
-                 <a class="button" target="_blank" 
-                   href="https://mozilla.github.io/pdf.js/web/viewer.html?file=${criminal.files[0].url}">
-                   Veiw
-                </a>
-            </div>
-            `;
+// Code below demonstrates the basic process to filter information by borough. Use this as a guide for Challenges 2 and 4 below.
+function filterByBorough(){
+  let output = document.getElementById("output");
+  let borough = document.getElementById("borough").value;
+  let result = document.getElementById("result");
+  
+  let build = "";
+  let ct = 0;
+
+  for(let i = 0; i < data.length; i+=1){
+    let complaint = data[i];
+    if(complaint.borough == borough){
+      build += `<div class="fitted card">
+                    <h3>${complaint.complaint_type}</h3>
+                    <hr>
+                    <p>${complaint.borough}</p>
+                    <p>${complaint.incident_zip}</p>
+                    <p>${complaint.descriptor}</p>
+                    <hr>
+                    <p>${complaint.created_date}</p>
+                    <hr>
+                    <p>${complaint.agency}</p>
+                </div>`;
+      ct += 1;
+    }
+  }
+  result.innerHTML = `${ct} Results found.`
+  output.innerHTML = build;
+}
+
+// Challenge 2: Create an event handler (function) to filter the 311 Service Request by zip code.
+function filterByZip() {
+  let output = document.getElementById("output");
+  let zip = document.getElementById("zipcode").value;
+  let result = document.getElementById("result");
+  let build = "";
+  let ct = 0;
+  for (let i = 0; i < data.length; i += 1) {
+    let complaint = data[i];
+    if (complaint.incident_zip == zip) {
+      build += `<div class="fitted card">
+       <h3>${complaint.complaint_type}</h3>
+       <hr>
+       <p>${complaint.borough}</p>
+       <p>${complaint.incident_zip}</p>
+       <p>${complaint.descriptor}</p>
+       <hr>
+       <p>${complaint.created_date}</p>
+       <hr>
+       <p>${complaint.agency}</p>
+       </div>`;
+       ct += 1;
+        }
+      }
+      result.innerHTML = `${ct} Results found for Zip Code: ${zip}`;
+      output.innerHTML = build;
     }
 
 
-  output.innerHTML = build;
-}
+// Challenge 4: Create an event handler (function) to filter the 311 Service Request by complaint type.
 

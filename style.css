@@ -46,8 +46,6 @@ nav a:hover{
   padding:10px;
   border:1px solid gray;
   text-align:center;
-  max-width:300px;
-  min-width:300px;
 }
 
 .highlight{
@@ -74,5 +72,22 @@ nav a:hover{
 .fit{
   width:150px;
   height:150px;
-  object-fit:cover;
+  object-fit:contain;
+}
+
+#leftPanel{
+  flex:1;
+}
+#rightPanel{
+  flex:2;
+}
+.fitted{
+  max-width:200px;
+  min-width:200px;
+}
+#result{
+  background-color: yellow;
+  color:red;
+  max-width: 200px;
+  font-size: 20px;
 }
