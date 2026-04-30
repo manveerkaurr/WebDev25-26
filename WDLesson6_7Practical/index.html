@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>WD_6.6 Practical</title>
+    <title><WD_6 class="7"></WD_6> Practical</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
    </head>
@@ -12,17 +12,17 @@
     <div id="banner" class="container center">
       <div style="text-align:center">
           <h1>NYC Open Data</h1>
-          <h2>Filtering 311 Complaints</h2>
+          <h2>Filtering Crashes</h2>
       </div>
     </div>
 
     <div class="container subbanner">
       <div>
         <p>This practical challenges students to provide various ways to filter  
-          311 Service Requests (Complaints) retrieved from NYC Open Data.</p>
+          Collisions (Crashes) retrieved from NYC Open Data.</p>
         <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a> 
         <a class="button" target="_blank" href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9/about_data"
-"> 311 Service Request</a>
+"> Collision</a>
         <a class="button" target="_blank" href="https://jsoneditoronline.org/"> JSON Editor Online</a>
        </div>
     </div>
@@ -32,9 +32,9 @@
         <!--Card below is the basic HTML to use for Challenge 1 and 3 -->
         <div class="card">
           <h3>SEARCH By Collision</h3>
-          <input type="text" id="borough" placeholder="Enter Borough (all CAPS)">
+          <input type="text" id="Collision" placeholder="Enter Collision(all CAPS)">
           <hr></hr>
-          <a class="button" onclick="filterByBorough()"> Search </a>
+          <a class="button" onclick="filterByCollision()"> Search </a>
         </div>
         <!--Challenge 1: Create another UI in order to filter by zip code. [See Challenge 2 in script.js] -->
         <div class="card">

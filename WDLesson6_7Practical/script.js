@@ -1,7 +1,7 @@
 let data, info;
 
 async function init(){   
-  let link = "311.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
+  let link = "mvc.json"; //let link = "https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=1000";
   info = await fetch(link);
   data = await info.json();
   
@@ -9,17 +9,17 @@ async function init(){
   let build = "";
 
   for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
+    let crash = data[i];
     build += `<div class="fitted card">
-                 <h3>${complaint.complaint_type}</h3>
+                 <h3>${crash.crash_type}</h3>
                  <hr>
-                 <p>${complaint.borough}</p>
-                 <p>${complaint.incident_zip}</p>
-                 <p>${complaint.descriptor}</p>
+                 <p>${crash.killed}</p>
+                 <p>${crash.injured}</p>
+                 <p>${crash.time}</p>
                  <hr>
-                 <p>${complaint.created_date}</p>
+                 <p>${crash.cyclists_killed}</p>
                  <hr>
-                 <p>${complaint.agency}</p>
+                 <p>${crash.street}</p>
               </div>`    
   }
   output.innerHTML = build;
@@ -35,16 +35,16 @@ function filterByBorough(){
   let ct = 0;
 
   for(let i = 0; i < data.length; i+=1){
-    let complaint = data[i];
-    if(complaint.borough == borough){
+    let crash = data[i];
+    if(crash.street == street){
       build += `<div class="fitted card">
-                    <h3>${complaint.complaint_type}</h3>
+                    <h3>${crash.crash_type}</h3>
                     <hr>
-                    <p>${complaint.borough}</p>
-                    <p>${complaint.incident_zip}</p>
-                    <p>${complaint.descriptor}</p>
+                    <p>${crash.borough}</p>
+                    <p>${crash.incident_zip}</p>
+                    <p>${crash.descriptor}</p>
                     <hr>
-                    <p>${complaint.created_date}</p>
+                    <p>${crash.created_date}</p>
                     <hr>
                     <p>${complaint.agency}</p>
                 </div>`;
