@@ -56,33 +56,30 @@ function filterByBorough(){
 }
 
 // Challenge 2: Create an event handler (function) to filter the 311 Service Request by zip code.
-function filterByZip() {
+function filterByCrash() {
   let output = document.getElementById("output");
-  let zip = document.getElementById("zipcode").value;
+  let zip = document.getElementById("Crash").value;
   let result = document.getElementById("result");
   let build = "";
   let ct = 0;
   for (let i = 0; i < data.length; i += 1) {
-    let complaint = data[i];
-    if (complaint.incident_zip == zip) {
+    let crash = data[i];
+    if (crash.incident_zip == zip) {
       build += `<div class="fitted card">
-       <h3>${complaint.complaint_type}</h3>
+       <h3>${crash.crash_type}</h3>
        <hr>
-       <p>${complaint.borough}</p>
-       <p>${complaint.incident_zip}</p>
-       <p>${complaint.descriptor}</p>
+       <p>${crash.borough}</p>
+       <p>${crash.incident_zip}</p>
+       <p>${crash.descriptor}</p>
        <hr>
-       <p>${complaint.created_date}</p>
+       <p>${crash.created_date}</p>
        <hr>
-       <p>${complaint.agency}</p>
+       <p>${crash.agency}</p>
        </div>`;
        ct += 1;
         }
       }
-      result.innerHTML = `${ct} Results found for Zip Code: ${zip}`;
+      result.innerHTML = `${ct} Results found for crash: ${crash}`;
       output.innerHTML = build;
     }
-
-
-// Challenge 4: Create an event handler (function) to filter the 311 Service Request by complaint type.
 
