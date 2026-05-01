@@ -13,9 +13,9 @@ async function init(){
     build += `<div class="fitted card">
                  <h3>${crash.crash_type}</h3>
                  <hr>
-                 <p>${crash.killed}</p>
-                 <p>${crash.injured}</p>
-                 <p>${crash.time}</p>
+                 <p>${crash.number_of_motorist_injured}</p>
+                 <p>${crash.number_of_cyclist_killed}</p>
+                 <p>${crash.number_of_cyclist_injured}</p>
                  <hr>
                  <p>${crash.cyclists_killed}</p>
                  <hr>
