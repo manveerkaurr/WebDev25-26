@@ -19,16 +19,16 @@ async function init(){
                  <hr>
                  <p>${crash.cyclists_killed}</p>
                  <hr>
-                 <p>${crash.street}</p>
+                 <p>${crash.number_of_persons_injured}</p>
               </div>`    
   }
   output.innerHTML = build;
 }
 
 // Code below demonstrates the basic process to filter information by borough. Use this as a guide for Challenges 2 and 4 below.
-function filterByBorough(){
+function filterByCrash(){
   let output = document.getElementById("output");
-  let borough = document.getElementById("borough").value;
+  let crash = document.getElementById("crash").value;
   let result = document.getElementById("result");
   
   let build = "";
@@ -38,15 +38,15 @@ function filterByBorough(){
     let crash = data[i];
     if(crash.street == street){
       build += `<div class="fitted card">
-                    <h3>${crash.crash_type}</h3>
+                    <h3>${crash.number_of_persons_injured}</h3>
                     <hr>
-                    <p>${crash.borough}</p>
-                    <p>${crash.incident_zip}</p>
-                    <p>${crash.descriptor}</p>
+                    <p>${crash.number_of_persons_killed}</p>
+                    <p>${crash.number_of_pedestrians_injured}</p>
+                    <p>${crash.number_of_pedestrians_killed}</p>
                     <hr>
-                    <p>${crash.created_date}</p>
+                    <p>${crash.number_of_motorist_injured}</p>
                     <hr>
-                    <p>${complaint.agency}</p>
+                    <p>${crash.number_of_motorist_killed}</p>
                 </div>`;
       ct += 1;
     }
@@ -68,11 +68,11 @@ function filterByCrash() {
       build += `<div class="fitted card">
        <h3>${crash.crash_type}</h3>
        <hr>
-       <p>${crash.borough}</p>
-       <p>${crash.incident_zip}</p>
-       <p>${crash.descriptor}</p>
+       <p>${crash.number_of_persons_injured}</p>
+       <p>${crash.number_of_persons_killed}</p>
+       <p>${crash.number_of_cyclist_killed}</p>
        <hr>
-       <p>${crash.created_date}</p>
+       <p>${crash.number_of_motorist_killed}</p>
        <hr>
        <p>${crash.agency}</p>
        </div>`;

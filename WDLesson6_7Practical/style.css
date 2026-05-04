@@ -12,7 +12,7 @@ html,body{
 }
 
 nav{
-  background-color:cornflowerblue;
+  background-color:rgb(126, 169, 235);
 }
 nav a{
   color:black;
@@ -25,14 +25,14 @@ nav a:hover{
   color:white;
 }
 .subbanner{
-  background-color:cornflowerblue;
+  background-color:rgba(218, 16, 93, 0.671);
 }
 #banner{
-  background-color:blue;
+  background-color:rgba(79, 111, 255, 0.493);
   color:white;
 }
 #footer{
-  background-color:cornflowerblue;
+  background-color:rgba(237, 228, 100, 0.623);
   color:white;
   /*position:fixed;*/
   left: 0;
@@ -50,18 +50,18 @@ nav a:hover{
 
 .highlight{
   font-style:italic;
-  color:blue;
+  color:rgb(25, 0, 255);
 }
 .heading{
   font-weight:bold;
 }
 .button{
   text-decoration:none;
-  background-color:blue;
+  background-color:rgb(216, 23, 135);
   color:white;
   border-radius:4px;
   padding:6px;
-  box-shadow:2px 2px 2px black;
+  box-shadow:2px 2px 2px rgb(80, 4, 4);
 }
 .button:hover{
   background-color:cornflowerblue;
