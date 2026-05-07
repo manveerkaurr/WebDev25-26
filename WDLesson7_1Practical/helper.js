@@ -47,10 +47,22 @@ function bmiCategory(bmi){
 
 //Challenge 7: Create a function lottery() that accepts how many random numbers to produce and returns a string of that many random numbers.
 // Random numbers range from 1 to 48. (Hint: Solution requires a for loop and a build variable. Use randint( ) provided at the top to produce the random numbers.  
-function lottery(){
-  
+function lottery(num){
+  let lotto = "";
+  for (let i=0; i<num; i+=1){
+    lotto += `${randint(1,48)} `;
+  }
+  return lotto;
 }
-
 //Challenge 9: Create a function results() that accepts an array of "Y" or "N" responses and returns the number of "Y" responses.
-
+function results(myArray){
+  let Ycount = 0;
+  for (let i=0; i < myArray.length; i+=1){
+    let response = myArray[i];
+    if (response =="Y"){
+      Ycount +=1;
+    }
+  }
+  return Ycount;
+}
 
